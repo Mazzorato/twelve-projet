@@ -8,15 +8,35 @@
 
 // 1. Je recupere toutes les petites vignettes
 const vignettes = document.querySelectorAll(".small");
+
 // 2. Je recupere la grande photo
 const fullImg = document.getElementById("full");
 
-// 3. Je recupere le bouton AJOUTER
-const btnAdd = document.querySelector(".btn-add");
+vignettes.forEach(function(vignette) {
+    vignette.addEventListener("click", function (){
+        const tampon_fullSrc = fullImg.getAttribute("src");
+        fullImg.setAttribute("src", vignette.getAttribute("src"));
+        vignette.setAttribute("src", tampon_fullSrc.getAttribute("src"));
+        
+        
+    })
+})
 
-// 4. Je recupere la balise vide de message d'ajout du panier
+
+
+
+
 const panierMsg = document.querySelector(".panier-msg");
-// 5. Je crée une variable qui contient le nombre de produits ajoutées ua panier
-let panier = 0;
+const btnAjouter = document.querySelector(".btn-add");
 
-// ...
+let nbPanier = 0;
+
+
+
+btnAjouter.addEventListener("click",function () {
+    nbPanier++;
+    
+    
+    panierMsg.innerText = `Vous avez ${nbPanier} produits dans votre panier.`;
+})
+   

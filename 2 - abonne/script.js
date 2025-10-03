@@ -11,8 +11,24 @@ Nouvelles compétences:
 */
 
 // 1. Je recupere l'icone smiley
+const smiley = document.querySelector("#emoji");
+const btnSub = document.querySelector(".btn-sub");
 
-// 2. Je recupere le bouton ABONNER
+smiley.addEventListener("click",function() {
+    smiley.classList.toggle("fa-face-smile");
+    smiley.classList.toggle("happy");
+});
+
+let isAbonne = false;
+
+btnSub.addEventListener("click",function() {
+    btnSub.classList.toggle("abonne");
+    btnSub.classList.toggle("Abonnez-vous");
+  
+    isAbonne = !isAbonne
+
+
+    });
 
 // 3. Je défini une variable binaire qui exprime l'etat abonné ou non de l'utilisateur
 

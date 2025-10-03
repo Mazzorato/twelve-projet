@@ -4,8 +4,16 @@ Nouvelles compétences:
 - HTMLElement.style 
 */
 
-// 1. Je recupere le bouton "Accepter les cookies"
 
-// 2. Je recupere la banniere de cookies
+const cookies_elem = document.querySelector(".cookies");
+const btnAccept_elem = document.querySelector(".btn.accept");
 
-// 3. J'ecoute l'evenement "click" sur le bouton "Accepter les cookies"
+
+
+cookies_elem.addEventListener("click", () => {
+    cookies_elem.style.opacity = "0";
+    setTimeout(() => {
+        cookies_elem.style.display = "none";
+    }, 800); 
+});
+

@@ -11,3 +11,22 @@
 const btn = document.querySelector("button");
 // 2. Je recupere le conteneur de toasts
 const ctnToasts = document.querySelector(".container-toasts");
+
+btn.addEventListener("click", function() {
+
+    const toast = document.createElement("div");
+    toast.classList.add("toast");
+
+    toast.innerHTML = "<p> Votre fichier est enregistrer !</p>";
+
+    ctnToasts.appendChild(toast);
+
+    setTimeout(function () {
+        toast.remove();
+
+    }, 3000);
+
+    toast.addEventListener("click", function (){
+        toast.remove();
+    })
+})
