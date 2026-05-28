@@ -17,15 +17,6 @@ docker build  --tag user_name/twelve-prod .
 docker run -d -p 1212:80 user_name/twelve-prod
 ```
 
-# Port :
-8080
-
-# Conteneur : 
-80
-
-# Protocole
-TCP
-
 4- Accéder à l'application
 Ouvrir le projet dans un naviguateur et aller sur => http://localhost:1212
 
